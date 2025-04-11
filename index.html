@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Time Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Personal Time Management</h1>
+        </header>
+
+        <div class="main-content">
+            <!-- To-Do List Section -->
+            <section class="todo-section">
+                <h2>To-Do List</h2>
+                <div class="todo-input">
+                    <input type="text" id="taskInput" placeholder="Add a new task...">
+                    <select id="taskDay">
+                        <option value="">Select Day</option>
+                        <option value="Monday">Monday</option>
+                        <option value="Tuesday">Tuesday</option>
+                        <option value="Wednesday">Wednesday</option>
+                        <option value="Thursday">Thursday</option>
+                        <option value="Friday">Friday</option>
+                        <option value="Saturday">Saturday</option>
+                        <option value="Sunday">Sunday</option>
+                    </select>
+                    <select id="taskTime">
+                        <option value="">Select Time</option>
+                        <!-- Time options will be added dynamically -->
+                    </select>
+                    <button id="addTaskBtn">Add Task</button>
+                </div>
+                <div class="todo-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="pending">Pending</button>
+                    <button class="filter-btn" data-filter="completed">Completed</button>
+                </div>
+                <ul id="taskList" class="task-list">
+                    <!-- Tasks will be added here dynamically -->
+                </ul>
+            </section>
+
+            <!-- Timetable Section -->
+            <section class="timetable-section">
+                <h2>Timetable</h2>
+                <div class="timetable-controls">
+                    <button id="dailyViewBtn" class="view-btn active">Daily View</button>
+                    <button id="weeklyViewBtn" class="view-btn">Weekly View</button>
+                </div>
+                <div class="timetable-container">
+                    <div class="time-blocks" id="timeBlocks">
+                        <!-- Time blocks will be added here dynamically -->
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Task Edit Modal -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <h3>Edit Task</h3>
+            <input type="text" id="editTaskInput">
+            <select id="editTaskDay">
+                <option value="">Select Day</option>
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday">Sunday</option>
+            </select>
+            <select id="editTaskTime">
+                <option value="">Select Time</option>
+                <!-- Time options will be added dynamically -->
+            </select>
+            <div class="modal-buttons">
+                <button id="saveEditBtn">Save</button>
+                <button id="cancelEditBtn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
